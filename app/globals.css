@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.featured-card { min-height: 400px; }
+.featured-card { min-height: 340px; }
 
 .featured-card::after {
   content: "";
