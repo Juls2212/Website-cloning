@@ -18,34 +18,34 @@ function Art({ kind }) {
   return <><div className="absolute right-4 top-10 grid grid-cols-3 gap-2 opacity-90">{Array.from({ length: 9 }).map((_, i) => <span key={i} className="h-9 w-9 rounded-xl bg-white/80 shadow-lg" />)}</div><div className="absolute left-8 top-24 h-24 w-24 rounded-full border-[15px] border-white/80" /></>;
 }
 
-function GetButton() { return <button className="rounded-full bg-white/90 px-4 py-1.5 text-[11px] font-bold tracking-wide text-blue-600">GET</button>; }
+function GetButton() { return <button className="rounded-full bg-white/90 px-3.5 py-1 text-[10px] font-bold tracking-wide text-blue-600">GET</button>; }
 
 export default function Home() {
   return <main className="scene-background relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-16 text-white">
-    <aside className="absolute left-[max(1.5rem,calc(50%-39rem))] top-1/2 z-10 hidden -translate-y-1/2 flex-col gap-3 rounded-2xl border border-white/25 bg-slate-700/55 p-2 shadow-xl backdrop-blur-sm md:flex">
-      <button className="grid h-10 w-10 place-items-center rounded-xl bg-blue-500 text-lg font-bold">A</button>
-      <button className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-lg">✦</button>
-      <button className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 text-lg">⌕</button>
+    <aside className="absolute left-[calc(50%-40vw)] top-[47%] z-10 hidden -translate-y-1/2 flex-col gap-1.5 rounded-full border border-white/20 bg-slate-700/50 p-1.5 shadow-lg md:flex xl:left-[calc(50%-38.5rem)]">
+      <button className="grid h-9 w-9 place-items-center rounded-full bg-blue-500 text-base font-bold">A</button>
+      <button className="grid h-9 w-9 place-items-center rounded-full bg-white/12 text-base">✦</button>
+      <button className="grid h-9 w-9 place-items-center rounded-full bg-white/12 text-base">⌕</button>
     </aside>
 
-    <section className="relative w-full max-w-[1080px] rounded-[34px] border border-white/20 bg-stone-400/75 px-5 pb-7 pt-5 shadow-2xl backdrop-blur-[2px] md:px-9 md:pb-9">
-      <div className="absolute left-1/2 top-5 flex -translate-x-1/2 gap-1.5">{[0,1,2,3,4].map((dot) => <span key={dot} className={`h-1.5 w-1.5 rounded-full ${dot === 1 ? "bg-white" : "bg-white/45"}`} />)}</div>
-      <div className="absolute right-5 top-4 grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-orange-200 to-rose-500 text-xs font-bold shadow-md md:right-8">JD</div>
+    <section className="relative w-full max-w-[1180px] -translate-y-[3vh] rounded-[30px] border border-white/20 bg-stone-400/62 px-5 pb-6 pt-4 shadow-2xl md:w-[70vw] md:px-7 md:pb-7">
+      <div className="absolute left-1/2 top-4 flex -translate-x-1/2 gap-1">{[0,1,2,3,4].map((dot) => <span key={dot} className={`h-1.5 w-1.5 rounded-full ${dot === 1 ? "bg-white" : "bg-white/40"}`} />)}</div>
+      <div className="absolute right-5 top-3.5 grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-orange-200 to-rose-500 text-[10px] font-bold shadow-md md:right-7">JD</div>
 
-      <div className="mt-12 flex items-center gap-2"><h1 className="text-2xl font-bold tracking-tight md:text-[28px]">Get Started</h1><span className="text-xl">›</span></div>
-      <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {featured.map((card) => <article key={card.app} className={`featured-card relative isolate overflow-hidden rounded-[22px] bg-gradient-to-br ${card.tone} p-4 shadow-lg`}>
+      <div className="mt-10 flex items-center gap-1.5"><h1 className="text-[22px] font-semibold tracking-tight md:text-[25px]">Get Started</h1><span className="text-lg">›</span></div>
+      <div className="mt-3.5 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+        {featured.map((card) => <article key={card.app} className={`featured-card relative isolate overflow-hidden rounded-[19px] bg-gradient-to-br ${card.tone} p-3.5 shadow-lg`}>
           <Art kind={card.art} />
-          <div className="relative z-10"><p className="text-[10px] font-bold tracking-[.12em] text-white/80">{card.kicker}</p><h2 className="mt-1 text-[21px] font-bold leading-[1.05] tracking-tight">{card.title}</h2></div>
-          <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center gap-2 bg-black/35 p-3 backdrop-blur-sm"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-[9px] bg-white/90 text-xs font-black text-slate-800">{card.app[0]}</div><div className="min-w-0 flex-1"><p className="truncate text-xs font-bold">{card.app}</p><p className="truncate text-[10px] text-white/75">{card.sub}</p></div><GetButton /></div>
+          <div className="relative z-10"><p className="text-[9px] font-bold tracking-[.12em] text-white/80">{card.kicker}</p><h2 className="mt-1 text-[19px] font-bold leading-[1.07] tracking-tight">{card.title}</h2></div>
+          <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center gap-2 border-t border-white/10 bg-black/40 p-2.5"><div className="grid h-8 w-8 shrink-0 place-items-center rounded-[8px] bg-white/90 text-[11px] font-black text-slate-800">{card.app[0]}</div><div className="min-w-0 flex-1"><p className="truncate text-[11px] font-bold">{card.app}</p><p className="truncate text-[9px] text-white/75">{card.sub}</p></div><GetButton /></div>
         </article>)}
       </div>
 
-      <div className="mt-7 flex items-center gap-2"><h2 className="text-xl font-bold tracking-tight md:text-2xl">Apps and Games We Love</h2><span className="text-xl">›</span></div>
-      <div className="mt-4 flex flex-col gap-3 lg:flex-row">
-        {favorites.map((item) => <article key={item.name} className="flex min-w-0 flex-1 items-center gap-3 rounded-2xl bg-black/20 p-3"><div className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${item.icon} text-xl font-bold text-white shadow-md`}>{item.mark}</div><div className="min-w-0 flex-1"><h3 className="truncate text-sm font-bold">{item.name}</h3><p className="truncate text-xs text-white/75">{item.desc}</p></div><GetButton /></article>)}
+      <div className="mt-5 flex items-center gap-1.5"><h2 className="text-[19px] font-semibold tracking-tight md:text-[21px]">Apps and Games We Love</h2><span className="text-lg">›</span></div>
+      <div className="mt-3 flex flex-col gap-2.5 lg:flex-row">
+        {favorites.map((item) => <article key={item.name} className="flex h-[58px] min-w-0 flex-1 items-center gap-2.5 rounded-[14px] bg-black/17 px-2.5 py-2"><div className={`grid h-10 w-10 shrink-0 place-items-center rounded-[10px] ${item.icon} text-lg font-bold text-white shadow-md`}>{item.mark}</div><div className="min-w-0 flex-1"><h3 className="truncate text-[11px] font-bold">{item.name}</h3><p className="truncate text-[10px] text-white/75">{item.desc}</p></div><GetButton /></article>)}
       </div>
     </section>
-    <div className="absolute bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2"><span className="h-2 w-2 rounded-full bg-white/90" /><span className="h-2 w-12 rounded-full bg-white/70" /></div>
+    <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-white/90" /><span className="h-1.5 w-9 rounded-full bg-white/70" /></div>
   </main>;
 }
