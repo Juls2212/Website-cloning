@@ -19,12 +19,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.featured-card { min-height: 286px; }
+.featured-card { min-height: 400px; }
 
 .featured-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 51%, rgba(6, 9, 20, .18) 100%);
+  background: linear-gradient(180deg, transparent 61%, rgba(6, 9, 20, .18) 100%);
   pointer-events: none;
 }

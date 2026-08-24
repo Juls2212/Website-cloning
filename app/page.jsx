@@ -28,22 +28,22 @@ export default function Home() {
       <button className="grid h-9 w-9 place-items-center rounded-full bg-white/12 text-base">⌕</button>
     </aside>
 
-    <section className="relative w-full max-w-[1180px] -translate-y-[3vh] rounded-[30px] border border-white/20 bg-stone-400/62 px-5 pb-6 pt-4 shadow-2xl md:w-[70vw] md:px-7 md:pb-7">
+    <section className="relative w-full max-w-[1240px] -translate-y-[3vh] rounded-[30px] border border-white/20 bg-[#9a9189]/[.92] px-5 pb-6 pt-4 shadow-2xl md:w-[78vw] md:px-7 md:pb-6">
       <div className="absolute left-1/2 top-4 flex -translate-x-1/2 gap-1">{[0,1,2,3,4].map((dot) => <span key={dot} className={`h-1.5 w-1.5 rounded-full ${dot === 1 ? "bg-white" : "bg-white/40"}`} />)}</div>
       <div className="absolute right-5 top-3.5 grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-orange-200 to-rose-500 text-[10px] font-bold shadow-md md:right-7">JD</div>
 
       <div className="mt-10 flex items-center gap-1.5"><h1 className="text-[22px] font-semibold tracking-tight md:text-[25px]">Get Started</h1><span className="text-lg">›</span></div>
-      <div className="mt-3.5 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-3.5 grid grid-cols-1 gap-2.5 md:grid-cols-2 lg:grid-cols-4">
         {featured.map((card) => <article key={card.app} className={`featured-card relative isolate overflow-hidden rounded-[19px] bg-gradient-to-br ${card.tone} p-3.5 shadow-lg`}>
           <Art kind={card.art} />
           <div className="relative z-10"><p className="text-[9px] font-bold tracking-[.12em] text-white/80">{card.kicker}</p><h2 className="mt-1 text-[19px] font-bold leading-[1.07] tracking-tight">{card.title}</h2></div>
-          <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center gap-2 border-t border-white/10 bg-black/40 p-2.5"><div className="grid h-8 w-8 shrink-0 place-items-center rounded-[8px] bg-white/90 text-[11px] font-black text-slate-800">{card.app[0]}</div><div className="min-w-0 flex-1"><p className="truncate text-[11px] font-bold">{card.app}</p><p className="truncate text-[9px] text-white/75">{card.sub}</p></div><GetButton /></div>
+          <div className="absolute bottom-0 left-0 right-0 z-10 flex h-[92px] items-center gap-2 border-t border-white/10 bg-[#17191d]/90 p-3"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-[9px] bg-white/90 text-[11px] font-black text-slate-800">{card.app[0]}</div><div className="min-w-0 flex-1"><p className="truncate text-[11px] font-bold">{card.app}</p><p className="truncate text-[9px] text-white/75">{card.sub}</p></div><GetButton /></div>
         </article>)}
       </div>
 
-      <div className="mt-5 flex items-center gap-1.5"><h2 className="text-[19px] font-semibold tracking-tight md:text-[21px]">Apps and Games We Love</h2><span className="text-lg">›</span></div>
-      <div className="mt-3 flex flex-col gap-2.5 lg:flex-row">
-        {favorites.map((item) => <article key={item.name} className="flex h-[58px] min-w-0 flex-1 items-center gap-2.5 rounded-[14px] bg-black/17 px-2.5 py-2"><div className={`grid h-10 w-10 shrink-0 place-items-center rounded-[10px] ${item.icon} text-lg font-bold text-white shadow-md`}>{item.mark}</div><div className="min-w-0 flex-1"><h3 className="truncate text-[11px] font-bold">{item.name}</h3><p className="truncate text-[10px] text-white/75">{item.desc}</p></div><GetButton /></article>)}
+      <div className="mt-4 flex items-center gap-1.5"><h2 className="text-[19px] font-semibold tracking-tight md:text-[21px]">Apps and Games We Love</h2><span className="text-lg">›</span></div>
+      <div className="mt-2.5 flex flex-col gap-2.5 lg:flex-row">
+        {favorites.map((item) => <article key={item.name} className="flex h-[62px] min-w-0 flex-1 items-center gap-2.5 rounded-[14px] bg-[#5b5149]/95 px-3 py-2 shadow-md"><div className={`grid h-11 w-11 shrink-0 place-items-center rounded-[10px] ${item.icon} text-lg font-bold text-white shadow-md`}>{item.mark}</div><div className="min-w-0 flex-1"><h3 className="truncate text-[11px] font-bold">{item.name}</h3><p className="truncate text-[10px] text-white/75">{item.desc}</p></div><GetButton /></article>)}
       </div>
     </section>
     <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-white/90" /><span className="h-1.5 w-9 rounded-full bg-white/70" /></div>
